@@ -1,0 +1,166 @@
+object Form1: TForm1
+  Left = 0
+  Height = 698
+  Top = 41
+  Width = 1280
+  AllowDropFiles = True
+  Caption = 'SafeControl Language Translation Helper'
+  ClientHeight = 698
+  ClientWidth = 1280
+  OnCreate = FormCreate
+  OnDropFiles = FormDropFiles
+  OnResize = FormResize
+  Position = poScreenCenter
+  LCLVersion = '2.0.12.0'
+  object Edit_src: TEdit
+    Left = 88
+    Height = 22
+    Top = 0
+    Width = 328
+    OnClick = Edit_srcClick
+    TabOrder = 1
+    Text = 'choose sourcefile'
+  end
+  object StringGrid1: TStringGrid
+    Left = 8
+    Height = 696
+    Top = 48
+    Width = 1272
+    AutoAdvance = aaDown
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'KEY'
+        Width = 150
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'SUBKEY'
+        Width = 200
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Value Original'
+        Width = 420
+      end    
+      item
+        Font.Color = clNavy
+        Title.Caption = 'Value Translation'
+        Width = 420
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'no.'
+        Width = 60
+      end>
+    DefaultRowHeight = 17
+    DragMode = dmAutomatic
+    FixedCols = 0
+    Flat = True
+    Font.CharSet = 4
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goEditing, goAlwaysShowEditor, goSmoothScroll]
+    ParentFont = False
+    RowCount = 1
+    TabOrder = 3
+    OnDrawCell = StringGrid1DrawCell
+    OnKeyPress = StringGrid1KeyPress
+    OnMouseWheel = StringGrid1MouseWheel
+  end
+  object Button_merge: TButton
+    Left = 736
+    Height = 25
+    Top = 0
+    Width = 80
+    Caption = '>> merge >>'
+    OnClick = Button_mergeClick
+    TabOrder = 0
+  end
+  object Edit_dst: TEdit
+    Left = 88
+    Height = 22
+    Top = 24
+    Width = 328
+    OnClick = Edit_dstClick
+    TabOrder = 2
+    Text = 'choose destinationfile'
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 16
+    Top = 6
+    Width = 61
+    Caption = 'Sourcefile'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 16
+    Top = 24
+    Width = 69
+    Caption = 'Destination'
+    ParentColor = False
+  end
+  object Button_save: TButton
+    Left = 888
+    Height = 25
+    Top = 0
+    Width = 99
+    Caption = 'Save'
+    OnClick = Button_saveClick
+    TabOrder = 4
+  end
+  object Edit_search: TEdit
+    Left = 424
+    Height = 22
+    Top = 0
+    Width = 152
+    OnKeyPress = Edit_searchKeyPress
+    TabOrder = 5
+  end
+  object Button3: TButton
+    Left = 584
+    Height = 25
+    Top = 0
+    Width = 88
+    Caption = 'Search'
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object Label_wait: TStaticText
+    Left = 360
+    Height = 88
+    Top = 344
+    Width = 392
+    Caption = 'Please Wait...'
+    Color = clWindow
+    Font.Color = clBtnText
+    Font.Height = -64
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 7
+    Transparent = False
+    Visible = False
+  end
+  object CB_empty: TCheckBox
+    Left = 432
+    Height = 18
+    Top = 28
+    Width = 141
+    Caption = 'filter empty or equal'
+    OnChange = CB_emptyChange
+    TabOrder = 8
+  end
+  object B_help: TButton
+    Left = 1256
+    Height = 25
+    Top = 0
+    Width = 24
+    Caption = '?'
+    OnClick = B_helpClick
+    TabOrder = 9
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 440
+    Top = 112
+  end
+end

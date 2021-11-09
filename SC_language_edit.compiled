@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Compiler Value="C:\Dirk\Software\Lazarus2.0\fpc\3.2.0\bin\i386-win32\fpc.exe" Date="1381338394"/>
-  <Params Value=" -MObjFPC -Scgi -O2 -Xs -XX -WG -l -vewnhibq -FuC:\Dirk\Software\Lazarus2.0\lcl\units\i386-win32\win32 -FuC:\Dirk\Software\Lazarus2.0\lcl\units\i386-win32 -FuC:\Dirk\Software\Lazarus2.0\components\lazutils\lib\i386-win32 -FuC:\Dirk\Software\Lazarus2.0\packager\units\i386-win32 -FuC:\Dirk\Data\Development\LazarusProjekte\Safecontrol_Languagefile\ -oC:\Dirk\Data\Development\LazarusProjekte\Safecontrol_Languagefile\SC_language_edit.exe -dLCL -dLCLwin32 SC_language_edit.lpr"/>
+  <Compiler Value="/usr/local/bin/fpc" Date="1590953228"/>
+  <Params Value=" -MObjFPC -Scgi -Os2 -Xs -XX -k-framework -kCocoa -l -vewnhibq -Fu/Users/sdrum/.lazarus/lib/units/x86_64-darwin/cocoa -Fu/Applications/Lazarus/lcl/units/x86_64-darwin -Fu/Applications/Lazarus/components/lazutils/lib/x86_64-darwin -Fu/Applications/Lazarus/packager/units/x86_64-darwin -Fu/Users/sdrum/Development/Lazarus/SCLanguageEdit/ -o/Users/sdrum/Development/Lazarus/SCLanguageEdit/SC_language_edit -dLCL -dLCLcocoa SC_language_edit.lpr"/>
 </CONFIG>

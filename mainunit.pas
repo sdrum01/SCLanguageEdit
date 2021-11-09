@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, Grids, types;
+  StdCtrls, Grids, types, Inifiles;
 
 type
 
@@ -15,7 +15,7 @@ type
   TForm1 = class(TForm)
     B_help: TButton;
     Button_merge: TButton;
-    Button3: TButton;
+    Button_search: TButton;
     Button_save: TButton;
     CB_empty: TCheckBox;
     Edit_search: TEdit;
@@ -27,7 +27,7 @@ type
     Label_wait: TStaticText;
     StringGrid1: TStringGrid;
     procedure Button_mergeClick(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
+    procedure Button_searchClick(Sender: TObject);
 
     procedure Button_saveClick(Sender: TObject);
     procedure B_helpClick(Sender: TObject);
@@ -60,6 +60,7 @@ type
 
   private
     { private declarations }
+    Ini_file : string;
   public
     { public declarations }
   end;
@@ -503,7 +504,7 @@ end;
 
 procedure TForm1.B_helpClick(Sender: TObject);
 begin
-  ShowMessage('Safecontrol Language Edit '+ #10#13 +resourceVersionInfo+ #10#13 + 'Gunnebo Markersdorf 2016 (D.H.)');
+  ShowMessage('Safecontrol Language Edit '+ #10#13 +resourceVersionInfo+ #10#13 + 'Gunnebo Markersdorf (D.H.)');
 end;
 
 procedure TForm1.CB_emptyChange(Sender: TObject);
@@ -615,6 +616,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   key_languagefile_dst := '';
+  Ini_File := ExtractFileDir(Application.ExeName) + '/cb_config.ini'
 end;
 
 procedure TForm1.FormDropFiles(Sender: TObject; const FileNames: array of String
@@ -674,7 +676,7 @@ end;
 
 
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TForm1.Button_searchClick(Sender: TObject);
 begin
   search_in_list(Edit_Search.Text);
 end;
